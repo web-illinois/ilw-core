@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "emitDeclarationOnly": false,
+        "target": "ESNext",
+        "module": "ESNext"
+    }
+}

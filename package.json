@@ -1,0 +1,33 @@
+{
+    "name": "@illinois-toolkit/ilw-test-base",
+    "description": "Configuration and utilities for Illinois Web components.",
+    "repository": "github:web-illinois/ilw-test-base",
+    "private": false,
+    "license": "MIT",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist/**",
+        "tsconfig.base.json"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@axe-core/playwright": "^4.10.2",
+        "@playwright/test": "^1.54.1",
+        "axe-html-reporter": "^2.2.11",
+        "playwright": "^1.54.1",
+        "@vitest/browser": "^3.2.4",
+        "prettier": "^3.6.2",
+        "vitest-browser-lit": "^0.1.0"
+    }
+}
