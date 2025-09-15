@@ -13,6 +13,9 @@ test-results/
 playwright-report/
 ```
 
+Add new GitHub Actions by copying the contents of [`./workflows`](./workflows) to `.github/workflows` in the component project,
+and delete `publish_npm.yml` if it exists.
+
 Then follow the instructions below to add axe-core, and optionally Vitest.
 
 ### axe-core
