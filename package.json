@@ -31,5 +31,8 @@
         "@vitest/browser": "^3.2.4",
         "prettier": "^3.6.2",
         "vitest-browser-lit": "^0.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22"
     }
 }
