@@ -1,7 +1,7 @@
 {
-    "name": "@illinois-toolkit/ilw-test-base",
+    "name": "@illinois-toolkit/ilw-core",
     "description": "Configuration and utilities for Illinois Web components.",
-    "repository": "github:web-illinois/ilw-test-base",
+    "repository": "github:web-illinois/ilw-core",
     "private": false,
     "license": "MIT",
     "version": "1.0.0",
@@ -15,8 +15,7 @@
         }
     },
     "files": [
-        "dist/**",
-        "tsconfig.base.json"
+        "dist/**"
     ],
     "scripts": {
         "build": "tsc"
