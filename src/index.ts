@@ -1,2 +1,2 @@
-export * from "./element-variations";
-export * from "./axe";
+export * from "./element-variations.js";
+export * from "./axe.js";
