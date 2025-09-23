@@ -4,7 +4,7 @@
     "repository": "github:web-illinois/ilw-core",
     "private": false,
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -12,6 +12,10 @@
         ".": {
             "import": "./dist/index.js",
             "default": "./dist/index.js"
+        },
+        "./expect": {
+            "import": "./dist/expect.js",
+            "default": "./dist/expect.js"
         }
     },
     "files": [
@@ -25,9 +29,9 @@
     },
     "dependencies": {
         "@axe-core/playwright": "^4.10.2",
-        "@playwright/test": "^1.55.0",
+        "@playwright/test": "^1.55.1",
         "axe-html-reporter": "^2.2.11",
-        "playwright": "^1.55.0",
+        "playwright": "^1.55.1",
         "@vitest/browser": "^3.2.4",
         "prettier": "^3.6.2",
         "vitest-browser-lit": "^0.1.0"
