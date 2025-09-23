@@ -141,3 +141,21 @@ Add or replace the following script in package.json:
 Create a `test` directory in the component project root and add test files there.
 
 For examples, you can refer to [ilw-card tests](https://github.com/web-illinois/ilw-card/tree/1683db84c6a80958848e37fd10b7f096ded8240f/test).
+
+
+### Custom Vitest Assertions
+
+#### `toBeInViewport`
+
+Asserts that an element is in the viewport. To use, import the `expect` package in your test file:
+
+```typescript
+import "@illinois-toolkit/ilw-core/expect";
+```
+
+Then use it in a test, for example:
+
+```typescript
+const element = screen.getByText("Tundra Pic");
+await expect.element(element).toBeInViewport();
+```
