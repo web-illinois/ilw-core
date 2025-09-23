@@ -143,9 +143,9 @@ Create a `test` directory in the component project root and add test files there
 For examples, you can refer to [ilw-card tests](https://github.com/web-illinois/ilw-card/tree/1683db84c6a80958848e37fd10b7f096ded8240f/test).
 
 
-### Custom Vitest Assertions
+## Custom Vitest Assertions
 
-#### `toBeInViewport`
+### `toBeInViewport`
 
 Asserts that an element is in the viewport. To use, import the `expect` package in your test file:
 
