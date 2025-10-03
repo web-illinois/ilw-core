@@ -148,7 +148,7 @@ for (const [component, { version, filename }] of Object.entries(latest)) {
             json["js"] = `https://dev.toolkit.illinois.edu/${component}/${nextVersion}/${component}.js`;
         }
 
-        const outputPath = join(versionsDir, `${component}-${nextVersion}.json`);
+        const outputPath = join(versionsDir, `${component}.${nextVersion}.json`);
         writeFileSync(outputPath, JSON.stringify(json, null, 4));
         console.log(`Next version written to: ${outputPath}`);
 
