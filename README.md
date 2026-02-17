@@ -4,19 +4,15 @@ Shared testing code for Illinois Toolkit components.
 
 ## Adding to an existing repository
 
-Add `@illinois-toolkit/ilw-core` to devDependencies in package.json, `npm install -D @illinois-toolkit/ilw-core`.
-
-Add the following lines to `.gitignore`:
-
-```
-test-results/
-playwright-report/
-```
-
-Add new GitHub Actions by copying the contents of [`./workflows`](./workflows) to `.github/workflows` in the component project,
-and delete `publish_npm.yml` if it exists.
-
-Then follow the instructions below to add axe-core, and optionally Vitest.
+1. Add `@illinois-toolkit/ilw-core` to devDependencies in package.json, `npm install -D @illinois-toolkit/ilw-core`.
+2. Add the following lines to `.gitignore`:
+   ```
+   test-results/
+   playwright-report/
+   ```
+3. Delete any existing `deploy` workflow in `.github/workflows`.
+4. Copy the contents of [`./workflows`](./workflows) to `.github/workflows` in the component project.
+5. Follow the instructions below to add axe-core, and optionally Vitest.
 
 ### axe-core
 
@@ -30,8 +26,8 @@ Add the following dependencies to devDependencies:
 
 ```
 npm install -D \
-  @playwright/test@^1.54.1 \
-  playwright@^1.54.1
+  @playwright/test \
+  playwright
 ```
 
 #### 3. Test scripts
@@ -119,8 +115,9 @@ Add the following dependencies to devDependencies:
 
 ```
 npm install -D \
-  @vitest/browser@^3.2.4 \
-  vitest-browser-lit@^0.1.0
+  @vitest/browser \
+  @vitest/browser-playwright \
+  vitest-browser-lit
 ```
 
 #### 3. Test script

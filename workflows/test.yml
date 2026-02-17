@@ -9,6 +9,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.58.2-noble
+      options: --user 1001
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,9 +21,6 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
 
       - name: Run axe-core tests
         run: npm run test:axe
