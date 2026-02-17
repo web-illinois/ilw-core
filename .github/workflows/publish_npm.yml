@@ -5,13 +5,16 @@ on:
     types: [published]
 jobs:
   build:
+    permissions:
+      contents: read
+      id-token: write  # Required for NPM Publish OIDC
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: '22.x'
+        node-version: '24'
         registry-url: 'https://registry.npmjs.org'
     - name: Install dependencies
       run: npm ci
@@ -19,5 +22,3 @@ jobs:
       run: npm run build
     - name: Install to npm
       run: npm publish --access public
-      env:
-          NODE_AUTH_TOKEN: ${{secrets.TOOLKIT_NPM_SECRET}}
