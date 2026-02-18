@@ -3,11 +3,11 @@ on:
   workflow_dispatch:
   release:
     types: [published]
+permissions:
+  contents: read
+  id-token: write  # Required for NPM Publish OIDC
 jobs:
   build:
-    permissions:
-      contents: read
-      id-token: write  # Required for NPM Publish OIDC
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
@@ -21,4 +21,4 @@ jobs:
     - name: Build
       run: npm run build
     - name: Install to npm
-      run: npm publish --access public
+      run: npm publish
